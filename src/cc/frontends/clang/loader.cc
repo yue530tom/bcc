@@ -106,6 +106,7 @@ int ClangLoader::parse(unique_ptr<llvm::Module> *mod, unique_ptr<vector<TableDes
                                    "-Wno-deprecated-declarations",
                                    "-Wno-gnu-variable-sized-type-not-at-end",
                                    "-fno-color-diagnostics",
+                                   "-fno-builtin",
                                    "-x", "c", "-c", abs_file.c_str()});
 
   KBuildHelper kbuild_helper(kdir);
